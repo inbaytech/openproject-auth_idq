@@ -23,7 +23,9 @@ module OpenProject
             providers.values.map do |h|
               h[:openproject_attribute_map] = Proc.new do |auth|
                 {
-                  login: auth[:uid]
+                  login: auth[:uid],
+                  firstname: 'First Name',
+                  lastname: 'Last Name'
                 }
               end
               h.symbolize_keys
